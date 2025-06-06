@@ -1,0 +1,23 @@
+scanner:
+  name: Test Scanner Model
+  typical_noise: 0.0025
+  max_range: null
+  angular_resolution: null
+  intensity_range: null
+cleaning:
+  statistical_outlier:
+    neighbors: 30.0
+    std_ratio: 1.5
+  radius_outlier:
+    radius: 0.05
+    min_neighbors: 10.0
+thinning:
+  method: voxel
+  voxel_size: 0.025
+  target_points: null
+  preserve_boundaries: true
+reflection:
+  intensity_available: false
+  intensity_threshold: 0.95
+  glass_detection: false
+  clustering_epsilon: 0.05

@@ -1,0 +1,26 @@
+# Default template for creating new scanner presets
+scanner:
+  name: "Generic Scanner"
+  typical_noise: 0.005  # 5mm default
+  max_range: null
+  angular_resolution: null
+  intensity_range: null
+
+cleaning:
+  statistical_outlier:
+    neighbors: 30
+    std_ratio: 1.5
+  radius_outlier:
+    radius: 0.05
+    min_neighbors: 10
+
+thinning:
+  method: "voxel"
+  voxel_size: 0.025  # 2.5cm conservative default
+  preserve_boundaries: true
+
+reflection:
+  intensity_available: false
+  intensity_threshold: 0.95
+  glass_detection: false
+  clustering_epsilon: 0.05

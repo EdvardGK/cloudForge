@@ -1,0 +1,25 @@
+scanner:
+  name: "FARO Focus"
+  typical_noise: 0.003  # 3mm
+  max_range: 350.0      # meters
+  angular_resolution: 0.035  # degrees
+  intensity_range: [0, 4095]
+
+cleaning:
+  statistical_outlier:
+    neighbors: 25
+    std_ratio: 1.8
+  radius_outlier:
+    radius: 0.06  # 6cm
+    min_neighbors: 8
+
+thinning:
+  method: "voxel"
+  voxel_size: 0.015  # 1.5cm
+  preserve_boundaries: true
+
+reflection:
+  intensity_available: true
+  intensity_threshold: 0.93
+  glass_detection: true
+  clustering_epsilon: 0.03
